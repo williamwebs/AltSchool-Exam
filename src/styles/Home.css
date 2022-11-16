@@ -1,0 +1,151 @@
+.home {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.inner-container .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85vh;
+}
+
+.content {
+  flex-basis: 55%;
+  width: 100%;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  margin: 50px 0;
+  max-width: 450px;
+  width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fafafa;
+  padding: 15px 30px;
+  background-color: rgb(3, 216, 3);
+}
+
+.btn:hover {
+  background: rgb(3, 148, 3);
+  transition: background 0.5s;
+}
+
+.image {
+  flex-basis: 45%;
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.outer-circle {
+  width: 200px;
+  height: 200px;
+  background: rgb(3, 216, 3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.inner-circle {
+  width: 195px;
+  height: 195px;
+  background: #fafafa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.circle-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+}
+
+.profile-img {
+  max-width: 70px;
+  width: 100%;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.profile-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.profile-3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.profile-4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.profile-5 {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+.profile-5 {
+  animation: animate-reverse 10s linear infinite;
+}
+
+@keyframes animate-reverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 0 5px;
+  }
+}

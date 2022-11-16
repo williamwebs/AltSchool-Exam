@@ -1,0 +1,22 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-test {
+  line-height: 40px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .error-test {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 20px;
+  }
+}
+

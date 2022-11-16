@@ -1,0 +1,39 @@
+.paginate {
+  padding: 20px 0;
+  margin: 40px 0 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination .page-item {
+  list-style: none;
+}
+
+.pagination .page-item a {
+  border: 1px solid #ddd;
+  font-size: 20px;
+  font-weight: 500;
+  color: #777;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 20px 30px;
+  cursor: pointer;
+}
+
+.pagination .page-item a:hover,
+.pagination .page-item a:active {
+  background: rgb(3, 216, 3);
+  color: #fafafa;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+/* .active {
+  background: rgb(3, 216, 3);
+  color: #fafafa;
+  font-weight: 600;
+  transition: all 0.5s;
+} */
