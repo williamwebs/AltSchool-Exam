@@ -48,7 +48,8 @@ input {
   border: none;
   outline: none;
   border-radius: 5px;
-  background: rgb(3, 216, 3);
+  background: #4db5ff;
+  /* background: rgb(3, 216, 3); */
   color: #fafafa;
   padding: 15px 0;
   text-transform: uppercase;

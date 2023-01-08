@@ -1,6 +1,12 @@
+.about {
+  height: 100vh;
+}
+
 h3 {
   text-transform: uppercase;
   font-size: 28px;
+  margin: 0;
+  padding: 20px 0 0;
 }
 
 p {

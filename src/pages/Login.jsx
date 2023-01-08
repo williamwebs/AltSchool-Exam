@@ -28,7 +28,7 @@ const Login = () => {
 
   const logout = (e) => {
     e.preventDefault();
-    auth.signOut()
+    auth.signOut();
   };
 
   // get redirect result
@@ -50,40 +50,43 @@ const Login = () => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
         setSignedIn(true);
-        const { displayName, email, uid, photoURL } = user
+        const { displayName, email, uid, photoURL } = user;
         setUser({ displayName, email, uid, photoURL });
         console.log(user);
         // ...
       } else {
         // User is signed out
-        setUser(null)
+        setUser(null);
       }
     });
   }, []);
 
   return (
-    <div className="login">
-      <NavBar />
-      <div className="inner-container">
-        {user ? (
-          <div className="sign-in">
-            <div className="user-img">
-              <img src={user.photoURL} alt="" />
+    <>
+      <div className="login">
+        <NavBar />
+        <div className="inner-container">
+          {user ? (
+            <div className="sign-in">
+              <div className="user-img">
+                <img src={user.photoURL} alt="" />
+              </div>
+              <div className="user-data">
+                <h3 className="user-name">{user.displayName}</h3>
+                <p className="user-email">{user.email}</p>
+                <button className="sign-up-btn" onClick={logout}>
+                  Log out
+                </button>
+              </div>
             </div>
-            <div className="user-data">
-              <h3 className="user-name">{user.displayName}</h3>
-              <p className="user-email">{user.email}</p>
-              <button className="sign-up-btn" onClick={logout}>Log out</button>
+          ) : (
+            <div className="sign-up">
+              <button className="sign-up-btn" onClick={signIn}>
+                Sign Up with Google
+              </button>
             </div>
-          </div>
-        ) : (
-          <div className="sign-up">
-            <button className="sign-up-btn" onClick={signIn}>
-              Sign Up with Google
-            </button>
-          </div>
-        )}
-        {/* <form action="" className="form" onSubmit={handleSubmit}>
+          )}
+          {/* <form action="" className="form" onSubmit={handleSubmit}>
           <label htmlFor="firstname">First Name</label>
           <input type="text" name="firstname" required />
 
@@ -103,8 +106,9 @@ const Login = () => {
             Sign Up
           </button>
         </form> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
